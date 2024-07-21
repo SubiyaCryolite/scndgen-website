@@ -1,3 +1,3 @@
-export const Landing=()=>{
-    return <>Landing</>
-}
+export const Landing = () => {
+  return <>Landing</>;
+};

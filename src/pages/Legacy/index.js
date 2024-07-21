@@ -1,1 +1,1 @@
-export * from './Legacy'
+export * from "./Legacy";

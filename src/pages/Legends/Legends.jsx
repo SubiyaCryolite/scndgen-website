@@ -1,3 +1,3 @@
-export const Legacy=()=>{
-    return <>Legacy</>
-}
+export const Legends = () => {
+  return <>Legends</>;
+};
