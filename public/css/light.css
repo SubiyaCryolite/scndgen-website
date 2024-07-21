@@ -1,0 +1,178 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  text-align: justify;
+}
+
+blockquote {
+  display: block;
+  margin: 1em 3em;
+  padding: 1em 3em;
+}
+
+@font-face {
+  font-family: "Ubuntu", sans-serif;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #808080;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: underline;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+blockquote {
+  display: block;
+  margin: 0.5em 1em;
+  padding: 0.5em 1em;
+}
+
+.nav-bar,
+.nav-bar-black {
+  width: 100%;
+}
+
+.nav-bar-black {
+  background-color: #868e96;
+}
+
+.header-white {
+  text-align: center;
+}
+
+.header-white a:link,
+.header-white a:hover,
+.header-white a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header_black {
+  text-align: center;
+  width: 12.5%;
+  margin: auto;
+  color: #000000;
+  text-decoration: none;
+}
+
+.header_black a:link,
+.header_black a:hover,
+.header_black a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+.highlight-on {
+  background-color: #b6c2cd;
+  /*border-bottom: 0.125em solid #ff0000;*/
+}
+
+.highlight-on a:link,
+.highlight-on a:hover,
+.highlight-on a:visited {
+  color: #000000;
+}
+
+.imgPadding {
+  margin: 0.125em;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2em;
+  margin: 2em 0 0;
+  text-align: center;
+  border-top: 0.25em solid #b6c2cd;
+  background-color: #868e96;
+  color: #ffffff;
+}
+
+.centerLanding {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  font-size: 3em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-container {
+  border-bottom: 0.25em solid #b6c2cd;
+}
+
+.footerContainer,
+.mainAside {
+  border-top: 0.25em solid #b6c2cd;
+}
+
+.header-container,
+.footerContainer,
+.mainAside {
+  background: #868e96;
+}
+
+.pulsate {
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-area {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
