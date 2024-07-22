@@ -1,4 +1,4 @@
-export const Blog = () => {
+export const Blog: React.FC = () => {
   return (
     <div>
       <p>

@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 
-import { AppLink } from "./AppLink.jsx";
+import { AppLink } from "./AppLink";
 
-export const Layout = () => {
+export const Layout: React.FC = () => {
   return (
     <>
       <div className="header-container">

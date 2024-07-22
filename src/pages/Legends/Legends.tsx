@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import { AppLink } from "../../components";
 
-export const Legends = () => {
+export const Legends : React.FC = () => {
   return (
     <div>
       <p className="container-fluid text-center">
         <img
-          src="/public/media/images/logo_legends.png"
+          src="/media/images/logo_legends.png"
           alt="The SCND Genesis: Legends"
           className="img-fluid"
         />

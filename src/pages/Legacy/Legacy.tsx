@@ -1,4 +1,4 @@
-export const Legacy = () => {
+export const Legacy : React.FC = () => {
   return (
     <div>
       <div>

@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { Link, To } from "react-router-dom";
 
 import { useAppLink } from "../hooks";
 
-export const AppLink = (props) => {
-  const { label, to, index, context = "def" } = props;
+interface Props{
+  label: String,
+  to: To,
+  index?: Boolean,
+  context?: String
+}
+
+export const AppLink: React.FC<Props> = (props) => {
+  const { label, to, index, context ='def' } = props;
 
   const { active, setActive } = useAppLink();
   const isActive = active[context] ? active[context] === to : Boolean(index);
@@ -23,11 +29,4 @@ export const AppLink = (props) => {
       </Link>
     </div>
   );
-};
-
-AppLink.propTypes = {
-  to: PropTypes.string,
-  label: PropTypes.string,
-  context: PropTypes.string,
-  index: PropTypes.bool,
 };

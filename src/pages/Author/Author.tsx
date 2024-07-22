@@ -1,9 +1,9 @@
-export const Author = () => {
+export const Author: React.FC = () => {
   return (
     <div className="text-center">
       <div>
         <img
-          src="/public/media/images/ifunga.jpg"
+          src="/media/images/ifunga.jpg"
           width="320"
           height="240"
           title="Ifunga Ndana"
@@ -18,7 +18,7 @@ export const Author = () => {
         >
           <img
             alt="Contact Ifunga Ndana via E-mail"
-            src="/public/media/images/At Symbol@2x.png"
+            src="/media/images/At Symbol@2x.png"
           />
         </a>
         <a
@@ -28,7 +28,7 @@ export const Author = () => {
         >
           <img
             alt="Facebook"
-            src="/public/media/images/Facebook Circle@2x.png"
+            src="/media/images/Facebook Circle@2x.png"
           />
         </a>
         <a
@@ -36,7 +36,7 @@ export const Author = () => {
           title="Follow me on twitter"
           target="_blank"
         >
-          <img alt="Twitter" src="/public/media/images/Twitter Circle@2x.png" />
+          <img alt="Twitter" src="/media/images/Twitter Circle@2x.png" />
         </a>
         <a
           href="https://www.linkedin.com/pub/ifunga-ndana/44/a30/667"
@@ -45,7 +45,7 @@ export const Author = () => {
         >
           <img
             alt="LinkedIn"
-            src="/public/media/images/LinkedIn Circle@2x.png"
+            src="/media/images/LinkedIn Circle@2x.png"
           />
         </a>
       </p>
