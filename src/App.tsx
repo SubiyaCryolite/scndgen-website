@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Route,
   createBrowserRouter,
@@ -15,7 +15,7 @@ import {
   Requirements,
   Features,
   Screenshots,
-} from "./pages/Legacy/tabs/index";
+} from "./pages/Legacy/tabs";
 
 export const App: React.FC = () => {
   const router = createBrowserRouter(

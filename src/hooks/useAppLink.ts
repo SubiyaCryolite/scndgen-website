@@ -1,7 +1,7 @@
 import {create} from "zustand";
 
 interface AppLinkState {
-  active: object;
+  active: any;
   setActive: (active: object) => void;
 }
 

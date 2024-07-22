@@ -3,10 +3,10 @@ import { Link, To } from "react-router-dom";
 import { useAppLink } from "../hooks";
 
 interface Props{
-  label: String,
+  label: string,
   to: To,
-  index?: Boolean,
-  context?: String
+  index?: boolean,
+  context?: string
 }
 
 export const AppLink: React.FC<Props> = (props) => {
