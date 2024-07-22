@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { Layout } from "./components";
-import { Author, Gallery, Legacy, Legends, Blog, Comics } from "./pages";
+import { Author, Gallery, Legacy, Legends, Blog, Comics, Page } from "./pages";
 
 import { Faq, Info, Requirements, Features, Screenshots } from "./pages";
 
@@ -24,7 +24,9 @@ export const App: React.FC = () => {
           <Route index element={<Info />} />
         </Route>
         <Route path="blog" element={<Blog />} />
-        <Route path="comics" element={<Comics />} />
+        <Route path="comics" element={<Comics />}>
+          <Route path=":page" element={<Page />} />
+        </Route>
         <Route path="gallery" element={<Gallery />} />
         <Route path="author" element={<Author />} />
       </Route>,

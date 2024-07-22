@@ -6,8 +6,8 @@ export const Gallery: React.FC = () => {
     const staging: ThumbnailProps[] = [];
     for (let i: number = 1; i <= 11; i++) {
       staging.push({
-        src: `/media/images/gallery/img-${i}.jpg`,
-        href: `/media/images/gallery/thumbnails/img-${i}.jpg`,
+        src: `/media/images/gallery/thumbnails/img-${i}.jpg`,
+        href: `/media/images/gallery/img-${i}.jpg`,
         title: `Image ${i}`,
       });
     }
