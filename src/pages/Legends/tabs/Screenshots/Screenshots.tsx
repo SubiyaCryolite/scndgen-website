@@ -1,18 +1,5 @@
 import { useMemo } from "react";
-
-interface ThumbnailProps {
-  href: string;
-  src: string;
-}
-
-const Thumbnail: React.FC<ThumbnailProps> = (props) => {
-  const { href, src } = props;
-  return (
-    <a href={href} data-lightbox="gallery" title="Screenshot">
-      <img src={src} alt="Screenshot" className="img-thumbnail imgPadding" />
-    </a>
-  );
-};
+import { Thumbnail, ThumbnailProps } from "../../../../components";
 
 export const Screenshots: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {
