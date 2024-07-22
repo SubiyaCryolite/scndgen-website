@@ -9,13 +9,7 @@ import {
 import { Layout } from "./components";
 import { Author, Gallery, Legacy, Legends, Blog, Comics } from "./pages";
 
-import {
-  Faq,
-  Info,
-  Requirements,
-  Features,
-  Screenshots,
-} from "./pages/Legacy/tabs";
+import { Faq, Info, Requirements, Features, Screenshots } from "./pages";
 
 export const App: React.FC = () => {
   const router = createBrowserRouter(

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { AppLink } from "../../components";
 
-export const Legends : React.FC = () => {
+export const Legends: React.FC = () => {
   return (
     <div>
       <p className="container-fluid text-center">
@@ -30,7 +30,7 @@ export const Legends : React.FC = () => {
           <div className="col-md-2" />
         </div>
       </div>
-      <div className="main-container">
+      <div className="main-container" style={{ marginTop: "1em" }}>
         <Outlet />
       </div>
     </div>
