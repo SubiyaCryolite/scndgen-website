@@ -6,8 +6,8 @@ export const Screenshots: React.FC = () => {
     const staging: ThumbnailProps[] = [];
     for (let i: number = 18; i >= 2; i--) {
       staging.push({
-        src: `/media/images/legends/t_Screenshot-${i}.jpg`,
-        href: `/media/images/legends/Screenshot-${i}.jpg`,
+        src: `/media/images/legends/thumbnails/img-legends-${i}.jpg`,
+        href: `/media/images/legends/img-legends-${i}.jpg`,
       });
     }
     return staging;

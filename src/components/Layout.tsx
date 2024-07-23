@@ -15,8 +15,8 @@ export const Layout: React.FC = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-2" />
-            <div className="col-md-8">
+            <div className="col-md-2 col-xl-4" />
+            <div className="col-md-8 col-xl-4">
               <div className="row text-center">
                 <AppLink index to="/" label="Legacy" />
                 <AppLink to="/legends" label="Legends" />
@@ -26,18 +26,18 @@ export const Layout: React.FC = () => {
                 <AppLink to="/author" label="Author" />
               </div>
             </div>
-            <div className="col-md-2" />
+            <div className="col-md-2 col-xl-4" />
           </div>
         </div>
       </div>
 
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-2"></div>
-          <div className="col-md-8 content-area">
+          <div className="col-md-2 col-xl-4" />
+          <div className="col-md-8 col-xl-4 content-area">
             <Outlet />
           </div>
-          <div className="col-md-2"></div>
+          <div className="col-md-2 col-xl-4" />
         </div>
       </div>
     </>
