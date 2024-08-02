@@ -40,6 +40,12 @@ export const Layout: React.FC = () => {
           <div className="col-md-2 col-xl-4" />
         </div>
       </div>
+
+      <div className="footer">
+        The SCND Genesis - Copyright © 2008 -&nbsp;
+        <span id="current_year">{new Date().getFullYear()}</span>
+        &nbsp;Ifunga Ndana. All rights reserved.
+      </div>
     </>
   );
 };

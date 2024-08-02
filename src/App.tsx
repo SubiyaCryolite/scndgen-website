@@ -29,8 +29,8 @@ export const App: React.FC = () => {
         </Route>
         <Route path="gallery" element={<Gallery />} />
         <Route path="author" element={<Author />} />
-      </Route>,
-    ),
+      </Route>
+    )
   );
 
   return <RouterProvider router={router} />;
