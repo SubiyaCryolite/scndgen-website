@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 
 import { Layout } from "./components";
-import { Author, Gallery, Legacy, Legends, Blog, Comics, Page } from "./pages";
+import { Author, Gallery, Legacy, Legends, Blog, Comics } from "./pages";
 
-import { Faq, Info, Requirements, Features, Screenshots } from "./pages";
+import { LegendRoutes } from "./pages/Legends";
+import { ComicRoutes } from "./pages/Comics";
 
 export const App: React.FC = () => {
   const router = createBrowserRouter(
@@ -17,15 +18,15 @@ export const App: React.FC = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Legacy />} />
         <Route path="legends" element={<Legends />}>
-          <Route path="requirements" element={<Requirements />} />
-          <Route path="screenshots" element={<Screenshots />} />
-          <Route path="features" element={<Features />} />
-          <Route path="faq" element={<Faq />} />
-          <Route index element={<Info />} />
+          {LegendRoutes.map(({ id, ...rest }) => (
+            <Route key={id} {...rest} />
+          ))}
         </Route>
         <Route path="blog" element={<Blog />} />
         <Route path="comics" element={<Comics />}>
-          <Route path=":page" element={<Page />} />
+          {ComicRoutes.map(({ id, ...rest }) => (
+            <Route key={id} {...rest} />
+          ))}
         </Route>
         <Route path="gallery" element={<Gallery />} />
         <Route path="author" element={<Author />} />

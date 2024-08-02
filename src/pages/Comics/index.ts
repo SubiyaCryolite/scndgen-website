@@ -1,2 +1,2 @@
 export * from "./Comics";
-export * from "./Page";
+export * from "./ComicRoutes";

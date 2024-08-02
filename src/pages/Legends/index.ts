@@ -1,2 +1,2 @@
 export * from "./Legends";
-export * from "./tabs";
+export * from "./LegendRoutes";
