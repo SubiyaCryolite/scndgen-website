@@ -3,7 +3,7 @@ import { withTabContext } from "../../context";
 
 import { Outlet } from "react-router-dom";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   return <Outlet />;
 };
 

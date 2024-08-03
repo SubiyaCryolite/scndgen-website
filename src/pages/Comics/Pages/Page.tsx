@@ -5,7 +5,7 @@ import { Thumbnail } from "./Thumbnail";
 import { page } from "./data";
 
 export const Page: React.FC = () => {
-  const { pageId } = useParams();
+  const { pageId = "0" } = useParams();
 
   const index: number = parseInt(pageId);
 

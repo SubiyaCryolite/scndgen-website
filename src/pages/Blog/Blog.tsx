@@ -1,7 +1,7 @@
 import { Tab } from "../../constants";
 import { withTabContext } from "../../context";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   return (
     <div>
       <p>

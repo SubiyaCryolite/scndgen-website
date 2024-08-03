@@ -4,7 +4,7 @@ import { withTabContext } from "../../context";
 import { useMemo } from "react";
 import { Thumbnail, ThumbnailProps } from "../../components";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {
     const staging: ThumbnailProps[] = [];
     for (let i: number = 1; i <= 11; i++) {

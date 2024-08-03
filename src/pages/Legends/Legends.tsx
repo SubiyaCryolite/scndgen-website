@@ -5,7 +5,7 @@ import { AppLink } from "../../components";
 import { TabContext, withTabContext, ContextProps } from "../../context";
 import { LegendTab, Tab } from "../../constants";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   const [active, setActive] = useState<string>("");
 
   const tabContext: ContextProps = useMemo(

@@ -1,7 +1,7 @@
 import { LegendTab } from "../../../../constants";
 import { withTabContext } from "../../../../context";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   return (
     <section>
       <p>
