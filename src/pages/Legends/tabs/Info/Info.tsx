@@ -1,4 +1,4 @@
-import { LegendTab, NS } from "../../../../constants";
+import { LegendTab } from "../../../../constants";
 import { withTabContext } from "../../../../context";
 
 export const Impl: React.FC = () => {
@@ -34,4 +34,4 @@ export const Impl: React.FC = () => {
   );
 };
 
-export const Info = withTabContext(Impl, LegendTab.Info, NS.Lgd);
+export const Info = withTabContext(Impl, LegendTab.Info);

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { LegendTab, NS } from "../../../../constants";
+import { LegendTab } from "../../../../constants";
 import { withTabContext } from "../../../../context";
 import { Thumbnail, ThumbnailProps } from "../../../../components";
 
@@ -24,4 +24,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Screenshots = withTabContext(Impl, LegendTab.Screenshots, NS.Lgd);
+export const Screenshots = withTabContext(Impl, LegendTab.Screenshots);

@@ -1,4 +1,4 @@
-import { Tab, NS } from "../../constants";
+import { Tab } from "../../constants";
 import { withTabContext } from "../../context";
 
 export const Impl: React.FC = () => {
@@ -8,7 +8,7 @@ export const Impl: React.FC = () => {
         <div className="videoContainer">
           <iframe
             src="https://www.youtube.com/embed/pNQe5iqfYu8"
-            frameBorder="0"
+            style={{ border: "none" }}
             className="video"
           />
         </div>
@@ -49,25 +49,28 @@ export const Impl: React.FC = () => {
         <br />
         Game
         <blockquote>
-          <p>
+          <div>
             The SCND Genesis: Legacy is a hybrid of turn based RPGs and fighting
             games. Unlike fighting games which put emphasis on mastering button
             combinations for combos, this game puts emphasis on when and how to
             use your attacks. It is based on a web comic of the same name.
-          </p>
-          <p>
+          </div>
+          <br />
+          <div>
             Gameplay is an evolution of the Jenesis Combat Engine (JCE). Each
             action is of a specific type and has its own cool down. Launcher
             attacks act as Combo Breakers that can be used strategically against
             your opponent as well as to extend your own combos.
-          </p>
-          <p>
+          </div>
+          <br />
+          <div>
             Base damage is affected by a Clash System, as you and your opponent
             land hits simultaneously a multiplier increases making both of you
             more powerful. Finally a fury bar is shared by both characters and
             can be used to pull off a Rage Combo when fully charged.
-          </p>
-          <p>
+          </div>
+          <br />
+          <div>
             <ul>
               <li>
                 You can alter your characters strengths and weaknesses by
@@ -93,9 +96,9 @@ export const Impl: React.FC = () => {
               <li>Will work on Windows, Linux and Steam OS</li>
               <li>Rendered by OpenGL4.4, written in Java 8</li>
             </ul>
-          </p>
+          </div>
         </blockquote>
-        <p>
+        <div>
           <a
             href="https://media.indiedb.com/images/downloads/1/82/81436/scndgen_legacy_2015-1-28-57903-s.png"
             title="Screenshot"
@@ -108,7 +111,8 @@ export const Impl: React.FC = () => {
               width="100%"
             />
           </a>
-        </p>
+        </div>
+        <br />
       </div>
       <div>
         <br />
@@ -127,4 +131,4 @@ export const Impl: React.FC = () => {
   );
 };
 
-export const Legacy = withTabContext(Impl, Tab.Legacy, NS.Tld);
+export const Legacy = withTabContext(Impl, Tab.Legacy);

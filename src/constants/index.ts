@@ -1,8 +1,3 @@
-export enum NS {
-  Tld = "tld",
-  Lgd = "lgd",
-}
-
 export enum Tab {
   Legends = "/legends",
   Author = "/author",

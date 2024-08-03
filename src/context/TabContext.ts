@@ -1,12 +1,12 @@
 import { createContext } from "react";
 
 export interface ContextProps {
-  active: any;
-  setActive: (value: object) => void;
+  active: string;
+  setActive: (value: string) => void;
 }
 
 const initialValue: ContextProps = {
-  active: {},
+  active: "",
   setActive: () => {},
 };
 

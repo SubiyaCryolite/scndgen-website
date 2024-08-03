@@ -1,10 +1,18 @@
+import { useState, useMemo } from "react";
 import { Outlet } from "react-router-dom";
 
 import { AppLink } from "../../components";
-import { withTabContext } from "../../context";
-import { LegendTab, Tab, NS } from "../../constants";
+import { TabContext, withTabContext, ContextProps } from "../../context";
+import { LegendTab, Tab } from "../../constants";
 
 export const Impl: React.FC = () => {
+  const [active, setActive] = useState<string>("");
+
+  const tabContext: ContextProps = useMemo(
+    () => ({ active, setActive }),
+    [active, setActive]
+  );
+
   return (
     <div>
       <p className="container-fluid text-center">
@@ -14,34 +22,28 @@ export const Impl: React.FC = () => {
           className="img-fluid"
         />
       </p>
-      <div className="header-container container-fluid">
-        <div className="row">
-          <div className="col-md-2" />
-          <div className="col-md-8">
-            <div className="row text-center">
-              <AppLink to={LegendTab.Info} label="Info" ns={NS.Lgd} />
-              <AppLink to={LegendTab.Features} label="Features" ns={NS.Lgd} />
-              <AppLink
-                to={LegendTab.Screenshots}
-                label="Screenshots"
-                ns={NS.Lgd}
-              />
-              <AppLink to={LegendTab.Faq} label="FAQ" ns={NS.Lgd} />
-              <AppLink
-                to={LegendTab.Requirements}
-                label="Requirements"
-                ns={NS.Lgd}
-              />
+      <TabContext.Provider value={tabContext}>
+        <div className="header-container container-fluid">
+          <div className="row">
+            <div className="col-md-2" />
+            <div className="col-md-8">
+              <div className="row text-center">
+                <AppLink to={LegendTab.Info} label="Info" />
+                <AppLink to={LegendTab.Features} label="Features" />
+                <AppLink to={LegendTab.Screenshots} label="Screenshots" />
+                <AppLink to={LegendTab.Faq} label="FAQ" />
+                <AppLink to={LegendTab.Requirements} label="Requirements" />
+              </div>
             </div>
+            <div className="col-md-2" />
           </div>
-          <div className="col-md-2" />
         </div>
-      </div>
-      <div className="main-container" style={{ marginTop: "1em" }}>
-        <Outlet />
-      </div>
+        <div className="main-container" style={{ marginTop: "1em" }}>
+          <Outlet />
+        </div>
+      </TabContext.Provider>
     </div>
   );
 };
 
-export const Legends = withTabContext(Impl, Tab.Legends, NS.Tld);
+export const Legends = withTabContext(Impl, Tab.Legends);

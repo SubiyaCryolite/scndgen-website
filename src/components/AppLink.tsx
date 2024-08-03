@@ -7,18 +7,14 @@ interface Props {
   label: string;
   to: To;
   tab?: string;
-  /**
-   * Namespace, depending on the level of tab
-   */
-  ns?: string;
 }
 
 export const AppLink: React.FC<Props> = (props) => {
-  const { label, to, ns = "top" } = props;
+  const { label, to } = props;
 
   const { active } = useContext(TabContext);
 
-  const isActive = active[ns] === to;
+  const isActive = active === to;
 
   let className = "header-white col";
   if (isActive) className += " highlight-on";

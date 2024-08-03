@@ -1,4 +1,4 @@
-import { Tab, NS } from "../../constants";
+import { Tab } from "../../constants";
 import { withTabContext } from "../../context";
 
 import { useMemo } from "react";
@@ -26,4 +26,4 @@ export const Impl: React.FC = () => {
   );
 };
 
-export const Gallery = withTabContext(Impl, Tab.Gallery, NS.Tld);
+export const Gallery = withTabContext(Impl, Tab.Gallery);
