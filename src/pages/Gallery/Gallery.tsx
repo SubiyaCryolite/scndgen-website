@@ -1,7 +1,10 @@
+import { Tab, NS } from "../../constants";
+import { withTabContext } from "../../context";
+
 import { useMemo } from "react";
 import { Thumbnail, ThumbnailProps } from "../../components";
 
-export const Gallery: React.FC = () => {
+export const Impl: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {
     const staging: ThumbnailProps[] = [];
     for (let i: number = 1; i <= 11; i++) {
@@ -22,3 +25,5 @@ export const Gallery: React.FC = () => {
     </div>
   );
 };
+
+export const Gallery = withTabContext(Impl, Tab.Gallery, NS.Tld);

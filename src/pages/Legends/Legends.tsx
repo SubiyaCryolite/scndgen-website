@@ -1,7 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { AppLink } from "../../components";
 
-export const Legends: React.FC = () => {
+import { AppLink } from "../../components";
+import { withTabContext } from "../../context";
+import { LegendTab, Tab, NS } from "../../constants";
+
+export const Impl: React.FC = () => {
   return (
     <div>
       <p className="container-fluid text-center">
@@ -16,14 +19,18 @@ export const Legends: React.FC = () => {
           <div className="col-md-2" />
           <div className="col-md-8">
             <div className="row text-center">
-              <AppLink context="Lgnd" label="Info" to="./" index />
-              <AppLink context="Lgnd" label="Features" to="./features" />
-              <AppLink context="Lgnd" label="Screenshots" to="./screenshots" />
-              <AppLink context="Lgnd" label="FAQ" to="./faq" />
+              <AppLink to={LegendTab.Info} label="Info" ns={NS.Lgd} />
+              <AppLink to={LegendTab.Features} label="Features" ns={NS.Lgd} />
               <AppLink
-                context="Lgnd"
+                to={LegendTab.Screenshots}
+                label="Screenshots"
+                ns={NS.Lgd}
+              />
+              <AppLink to={LegendTab.Faq} label="FAQ" ns={NS.Lgd} />
+              <AppLink
+                to={LegendTab.Requirements}
                 label="Requirements"
-                to="./requirements"
+                ns={NS.Lgd}
               />
             </div>
           </div>
@@ -36,3 +43,5 @@ export const Legends: React.FC = () => {
     </div>
   );
 };
+
+export const Legends = withTabContext(Impl, Tab.Legends, NS.Tld);

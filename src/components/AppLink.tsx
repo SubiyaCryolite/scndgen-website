@@ -1,32 +1,31 @@
+import { useContext } from "react";
 import { Link, To } from "react-router-dom";
 
-import { useAppLink } from "../hooks";
+import { TabContext } from "../context/TabContext";
 
-interface Props{
-  label: string,
-  to: To,
-  index?: boolean,
-  context?: string
+interface Props {
+  label: string;
+  to: To;
+  tab?: string;
+  /**
+   * Namespace, depending on the level of tab
+   */
+  ns?: string;
 }
 
 export const AppLink: React.FC<Props> = (props) => {
-  const { label, to, index, context ='def' } = props;
+  const { label, to, ns = "top" } = props;
 
-  const { active, setActive } = useAppLink();
-  const isActive = active[context] ? active[context] === to : Boolean(index);
+  const { active } = useContext(TabContext);
 
-  const handleClick = () => {
-    setActive({ [context]: to });
-  };
+  const isActive = active[ns] === to;
 
   let className = "header-white col";
   if (isActive) className += " highlight-on";
 
   return (
     <div className={className}>
-      <Link to={to} onClick={handleClick}>
-        {label}
-      </Link>
+      <Link to={to}>{label}</Link>
     </div>
   );
 };

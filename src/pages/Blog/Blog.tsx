@@ -1,4 +1,7 @@
-export const Blog: React.FC = () => {
+import { Tab, NS } from "../../constants";
+import { withTabContext } from "../../context";
+
+export const Impl: React.FC = () => {
   return (
     <div>
       <p>
@@ -16,3 +19,5 @@ export const Blog: React.FC = () => {
     </div>
   );
 };
+
+export const Blog = withTabContext(Impl, Tab.Blog, NS.Tld);

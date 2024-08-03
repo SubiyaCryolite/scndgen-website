@@ -1,4 +1,7 @@
-export const Requirements: React.FC = () => {
+import { LegendTab, NS } from "../../../../constants";
+import { withTabContext } from "../../../../context";
+
+export const Impl: React.FC = () => {
   return (
     <section>
       <br />
@@ -27,3 +30,9 @@ export const Requirements: React.FC = () => {
     </section>
   );
 };
+
+export const Requirements = withTabContext(
+  Impl,
+  LegendTab.Requirements,
+  NS.Lgd
+);

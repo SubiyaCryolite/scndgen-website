@@ -1,4 +1,7 @@
-export const Author: React.FC = () => {
+import { Tab, NS } from "../../constants";
+import { withTabContext } from "../../context";
+
+export const Impl: React.FC = () => {
   return (
     <div className="text-center">
       <div>
@@ -26,10 +29,7 @@ export const Author: React.FC = () => {
           title="Become my friend on Facebook"
           target="_blank"
         >
-          <img
-            alt="Facebook"
-            src="/media/images/Facebook Circle@2x.png"
-          />
+          <img alt="Facebook" src="/media/images/Facebook Circle@2x.png" />
         </a>
         <a
           href="https://www.twitter.com/subiyacryolite"
@@ -43,10 +43,7 @@ export const Author: React.FC = () => {
           title="LinkedIn Profile"
           target="_blank"
         >
-          <img
-            alt="LinkedIn"
-            src="/media/images/LinkedIn Circle@2x.png"
-          />
+          <img alt="LinkedIn" src="/media/images/LinkedIn Circle@2x.png" />
         </a>
       </p>
       <h3>Favourite Quotes</h3>
@@ -67,3 +64,5 @@ export const Author: React.FC = () => {
     </div>
   );
 };
+
+export const Author = withTabContext(Impl, Tab.Author, NS.Tld);

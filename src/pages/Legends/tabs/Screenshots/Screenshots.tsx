@@ -1,7 +1,9 @@
 import { useMemo } from "react";
+import { LegendTab, NS } from "../../../../constants";
+import { withTabContext } from "../../../../context";
 import { Thumbnail, ThumbnailProps } from "../../../../components";
 
-export const Screenshots: React.FC = () => {
+const Impl: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {
     const staging: ThumbnailProps[] = [];
     for (let i: number = 18; i >= 2; i--) {
@@ -21,3 +23,5 @@ export const Screenshots: React.FC = () => {
     </div>
   );
 };
+
+export const Screenshots = withTabContext(Impl, LegendTab.Screenshots, NS.Lgd);

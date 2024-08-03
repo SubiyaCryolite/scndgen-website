@@ -1,4 +1,7 @@
-export const Faq: React.FC = () => {
+import { LegendTab, NS } from "../../../../constants";
+import { withTabContext } from "../../../../context";
+
+const Impl: React.FC = () => {
   return (
     <section>
       <br />
@@ -87,3 +90,5 @@ export const Faq: React.FC = () => {
     </section>
   );
 };
+
+export const Faq = withTabContext(Impl, LegendTab.Faq, NS.Lgd);
