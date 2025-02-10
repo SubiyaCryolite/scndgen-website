@@ -1,5 +1,5 @@
-import { Tab } from "../../constants";
-import { withTabContext } from "../../context";
+import { Tab } from "@/constants";
+import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
   return (

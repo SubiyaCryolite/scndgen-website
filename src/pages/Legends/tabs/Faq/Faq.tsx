@@ -1,5 +1,5 @@
-import { LegendTab } from "../../../../constants";
-import { withTabContext } from "../../../../context";
+import { LegendTab } from "@/constants";
+import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
   return (

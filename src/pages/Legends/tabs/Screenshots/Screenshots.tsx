@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { LegendTab } from "../../../../constants";
-import { withTabContext } from "../../../../context";
-import { Thumbnail, ThumbnailProps } from "../../../../components";
+import { LegendTab } from "@/constants";
+import { withTabContext } from "@/context";
+import { Thumbnail, ThumbnailProps } from "@/components";
 
 const Impl: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {

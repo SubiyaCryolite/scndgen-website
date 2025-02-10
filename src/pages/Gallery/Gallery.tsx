@@ -1,8 +1,8 @@
-import { Tab } from "../../constants";
-import { withTabContext } from "../../context";
+import { Tab } from "@/constants";
+import { withTabContext } from "@/context";
 
 import { useMemo } from "react";
-import { Thumbnail, ThumbnailProps } from "../../components";
+import { Thumbnail, ThumbnailProps } from "@/components";
 
 const Impl: React.FC = () => {
   const data = useMemo<ThumbnailProps[]>(() => {
