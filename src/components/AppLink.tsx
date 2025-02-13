@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { Link, To } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, To } from "react-router";
 
-import { TabContext } from "../context/TabContext";
+import { TabContext } from "@/context";
 
 interface Props {
   label: string;

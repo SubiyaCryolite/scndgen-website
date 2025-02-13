@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 
@@ -131,4 +133,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Legacy = withTabContext(Impl, Tab.Legacy);
+export const Legacy: React.FC = withTabContext(Impl, Tab.Legacy);

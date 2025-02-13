@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
+
 import { LegendTab } from "@/constants";
 import { withTabContext } from "@/context";
 import { Thumbnail, ThumbnailProps } from "@/components";
@@ -24,4 +25,7 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Screenshots = withTabContext(Impl, LegendTab.Screenshots);
+export const Screenshots: React.FC = withTabContext(
+  Impl,
+  LegendTab.Screenshots,
+);

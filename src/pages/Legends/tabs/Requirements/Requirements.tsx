@@ -1,3 +1,5 @@
+import React from "react";
+
 import { LegendTab } from "@/constants";
 import { withTabContext } from "@/context";
 
@@ -31,4 +33,7 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Requirements = withTabContext(Impl, LegendTab.Requirements);
+export const Requirements: React.FC = withTabContext(
+  Impl,
+  LegendTab.Requirements,
+);

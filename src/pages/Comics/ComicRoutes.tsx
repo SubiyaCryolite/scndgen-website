@@ -1,4 +1,5 @@
-import { RouteProps } from "react-router-dom";
+import { RouteProps } from "react-router";
+
 import { Landing, Page } from "./Pages";
 
 export const ComicRoutes: RouteProps[] = [

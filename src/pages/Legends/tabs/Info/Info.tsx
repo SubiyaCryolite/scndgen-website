@@ -1,3 +1,5 @@
+import React from "react";
+
 import { LegendTab } from "@/constants";
 import { withTabContext } from "@/context";
 
@@ -34,4 +36,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Info = withTabContext(Impl, LegendTab.Info);
+export const Info: React.FC = withTabContext(Impl, LegendTab.Info);

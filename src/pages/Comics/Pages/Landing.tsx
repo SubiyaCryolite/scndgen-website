@@ -1,4 +1,5 @@
-import { Link, To } from "react-router-dom";
+import React from "react";
+import { Link, To } from "react-router";
 
 interface CollectionInfo {
   caption: string;

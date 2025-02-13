@@ -1,16 +1,22 @@
 import React from "react";
 import {
-  Route,
   createBrowserRouter,
   createRoutesFromElements,
+  Route,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router";
 
-import { Layout } from "./components";
-import { Author, Gallery, Legacy, Legends, Blog, Comics } from "./pages";
-
-import { LegendRoutes } from "./pages/Legends";
-import { ComicRoutes } from "./pages/Comics";
+import { Layout } from "@/components";
+import {
+  Author,
+  Blog,
+  ComicRoutes,
+  Comics,
+  Gallery,
+  Legacy,
+  LegendRoutes,
+  Legends,
+} from "@/pages";
 
 export const App: React.FC = () => {
   const router = createBrowserRouter(
@@ -30,8 +36,8 @@ export const App: React.FC = () => {
         </Route>
         <Route path="gallery" element={<Gallery />} />
         <Route path="author" element={<Author />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
 
   return <RouterProvider router={router} />;

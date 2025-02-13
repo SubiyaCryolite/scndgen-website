@@ -1,5 +1,6 @@
-import { RouteProps } from "react-router-dom";
-import { Faq, Info, Requirements, Features, Screenshots } from "./tabs";
+import { RouteProps } from "react-router";
+
+import { Faq, Features, Info, Requirements, Screenshots } from "./tabs";
 
 export const LegendRoutes: RouteProps[] = [
   { id: "l1", path: "requirements", element: <Requirements /> },
