@@ -1,16 +1,16 @@
-import { useMemo, useState } from "react";
-import { Outlet } from "react-router-dom";
+import React, { useMemo, useState } from "react";
+import { Outlet } from "react-router";
 
 import { AppLink } from "./AppLink";
 import { Tab } from "@/constants";
-import { TabContext, ContextProps } from "@/context";
+import { ContextProps, TabContext } from "@/context";
 
 export const Layout: React.FC = () => {
   const [active, setActive] = useState<string>("");
 
   const tabContext: ContextProps = useMemo(
     () => ({ active, setActive }),
-    [active, setActive]
+    [active, setActive],
   );
 
   return (

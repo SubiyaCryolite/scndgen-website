@@ -1,8 +1,8 @@
-import { useState, useMemo } from "react";
-import { Outlet } from "react-router-dom";
+import React, { useMemo, useState } from "react";
+import { Outlet } from "react-router";
 
 import { AppLink } from "@/components";
-import { TabContext, withTabContext, ContextProps } from "@/context";
+import { ContextProps, TabContext, withTabContext } from "@/context";
 import { LegendTab, Tab } from "@/constants";
 
 const Impl: React.FC = () => {
@@ -10,7 +10,7 @@ const Impl: React.FC = () => {
 
   const tabContext: ContextProps = useMemo(
     () => ({ active, setActive }),
-    [active, setActive]
+    [active, setActive],
   );
 
   return (
@@ -46,4 +46,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Legends = withTabContext(Impl, Tab.Legends);
+export const Legends: React.FC = withTabContext(Impl, Tab.Legends);

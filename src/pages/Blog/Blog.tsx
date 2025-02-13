@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 
@@ -20,4 +22,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Blog = withTabContext(Impl, Tab.Blog);
+export const Blog: React.FC = withTabContext(Impl, Tab.Blog);

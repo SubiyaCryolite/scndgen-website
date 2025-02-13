@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router";
+
 import { Nav } from "./Nav";
 import { Thumbnail } from "./Thumbnail";
-
 import { page } from "./data";
 
 export const Page: React.FC = () => {

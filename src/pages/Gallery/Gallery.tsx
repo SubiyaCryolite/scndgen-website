@@ -1,7 +1,7 @@
+import React, { useMemo } from "react";
+
 import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
-
-import { useMemo } from "react";
 import { Thumbnail, ThumbnailProps } from "@/components";
 
 const Impl: React.FC = () => {
@@ -26,4 +26,4 @@ const Impl: React.FC = () => {
   );
 };
 
-export const Gallery = withTabContext(Impl, Tab.Gallery);
+export const Gallery: React.FC = withTabContext(Impl, Tab.Gallery);

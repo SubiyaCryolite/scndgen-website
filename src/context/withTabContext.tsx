@@ -1,8 +1,11 @@
-import { useEffect, FC, ComponentType, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { TabContext } from "./TabContext";
 
-export const withTabContext = (Component: ComponentType, tab: string): FC => {
+export const withTabContext = (
+  Component: React.ComponentType,
+  tab: string,
+): React.FC => {
   const WithTabContext = () => {
     const { setActive } = useContext(TabContext);
 

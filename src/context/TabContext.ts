@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { Context, createContext } from "react";
 
 export interface ContextProps {
   active: string;
@@ -10,4 +10,4 @@ const initialValue: ContextProps = {
   setActive: () => {},
 };
 
-export const TabContext = createContext(initialValue);
+export const TabContext: Context<ContextProps> = createContext(initialValue);
