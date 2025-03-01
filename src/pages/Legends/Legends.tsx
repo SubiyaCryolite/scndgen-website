@@ -3,18 +3,19 @@ import { Outlet } from "react-router";
 
 import { AppLink } from "@/components";
 import { ContextProps, TabContext, withTabContext } from "@/context";
-import { LegendTab, Tab } from "@/constants";
+import { LegendTab, MetaTitle, Tab } from "@/constants";
 
 const Impl: React.FC = () => {
   const [active, setActive] = useState<string>("");
 
   const tabContext: ContextProps = useMemo(
     () => ({ active, setActive }),
-    [active, setActive],
+    [active, setActive]
   );
 
   return (
     <div>
+      <meta name="title" content={`${MetaTitle} Legends`} />
       <p className="container-fluid text-center">
         <img
           src="/media/images/logo_legends.png"

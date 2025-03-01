@@ -10,7 +10,7 @@ export const Layout: React.FC = () => {
 
   const tabContext: ContextProps = useMemo(
     () => ({ active, setActive }),
-    [active, setActive],
+    [active, setActive]
   );
 
   return (

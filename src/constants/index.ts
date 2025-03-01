@@ -14,3 +14,5 @@ export enum LegendTab {
   Faq = "./faq",
   Info = "./",
 }
+
+export const MetaTitle: string = "The SCND Genesis |";
