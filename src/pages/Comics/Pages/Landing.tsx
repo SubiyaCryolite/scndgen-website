@@ -57,7 +57,7 @@ export const Landing: React.FC = () => {
             <img
               src={thumb.imgSrc}
               alt={thumb.caption}
-              className="card-img-top"
+              className="img-link comic-thumb"
             />
           </Link>
           <div className="card-body">

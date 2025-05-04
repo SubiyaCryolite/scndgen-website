@@ -8,7 +8,7 @@ const Impl: React.FC = () => {
     <div>
       <meta name="title" content={`${MetaTitle} Legacy`} />
       <div>
-        <div className="videoContainer">
+        <div className="video-container">
           <iframe
             src="https://www.youtube.com/embed/pNQe5iqfYu8"
             style={{ border: "none" }}

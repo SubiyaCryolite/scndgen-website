@@ -11,7 +11,7 @@ export const Thumbnail: React.FC<ThumbnailData> = (props) => {
       <img
         src={"/media/images/comics/thumbs/" + props.src}
         alt={props.caption}
-        className="img-thumbnail imgPadding"
+        className="img-link comic-thumb img-padding"
       />
     </a>
   );
