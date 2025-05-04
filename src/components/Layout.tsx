@@ -54,7 +54,7 @@ export const Layout: React.FC = () => {
 
       <div className="footer">
         The SCND Genesis - Copyright © 2008 -&nbsp;
-        <span id="current_year">{new Date().getFullYear()}</span>
+        <span id="current-year">{new Date().getFullYear()}</span>
         &nbsp;Ifunga Ndana. All rights reserved.
       </div>
     </>
