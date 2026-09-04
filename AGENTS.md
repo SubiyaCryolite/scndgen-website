@@ -25,6 +25,7 @@ Homepage crawler fallbacks live in `index.html`. Keep them valid and aligned wit
 ## Stack notes
 
 - Functional components. Nav highlighting goes through `withTabContext`, not ad-hoc active state in links.
-- Static assets in `public/` (copied as-is). Media under `/media/...` may not be in git; do not assume it is missing.
+- Static assets in `public/` are copied into `dist/` as-is by Vite. Site images live in `public/media/images` and deploy as `/media/images/...`.
 - jQuery 3.x on the CDN is required by lightbox; do not bump to jQuery 4.
 - TypeScript 7 and ESLint 10 are not compatible with current lint plugins; stay on the versions in `package.json`.
+- Production deploys run from `.github/workflows/deploy.yml` on **git tag push**. The tag is baked into the footer as `VITE_APP_VERSION`. Never commit FTP credentials; they live in GitHub Actions secrets (`FTP_HOST` or `FTP_SERVER`, `FTPS_PORT`, `FTP_USERNAME` or `USERNAME`, `PASSWORD`). Optional: `FTP_REMOTE_DIR` (must end with `/`; defaults to `public_html/`). The FTP action is incremental: new and changed files upload, unchanged files are skipped via `.ftp-deploy-sync-state.json`. Do not enable `dangerous-clean-slate`.

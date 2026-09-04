@@ -1,0 +1,57 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and upload via FTPS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        env:
+          VITE_APP_VERSION: ${{ github.ref_name }}
+        run: npm run build
+
+      # Incremental sync (default): hashes live in .ftp-deploy-sync-state.json
+      # on the server. New and changed files upload; unchanged files are skipped.
+      # Files this action previously uploaded but that are gone from dist/ are
+      # removed remotely. Server files never uploaded by this action are left
+      # alone. Do not enable dangerous-clean-slate.
+      - name: Upload dist via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_HOST || secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME || secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          protocol: ${{ secrets.FTPS_PORT == '990' && 'ftps-legacy' || 'ftps' }}
+          port: ${{ secrets.FTPS_PORT }}
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_REMOTE_DIR || 'public_html/' }}
+          dangerous-clean-slate: false
+          log-level: standard
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**

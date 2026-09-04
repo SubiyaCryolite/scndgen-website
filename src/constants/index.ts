@@ -22,6 +22,7 @@ export const DEFAULT_DESCRIPTION =
   "The SCND Genesis is an action adventure set in a post apocalyptic Africa. Created by Ifunga Ndana";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/media/images/favicon/apple-touch-icon.png`;
 export const MetaTitle = `${SITE_NAME} |`;
+export const APP_VERSION: string = import.meta.env.VITE_APP_VERSION ?? "";
 
 export interface SeoContent {
   title: string;

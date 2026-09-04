@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router";
 
 import { AppLink } from "./AppLink";
 import { Seo } from "./Seo";
-import { Tab } from "@/constants";
+import { APP_VERSION, Tab } from "@/constants";
 import { ContextProps, TabContext } from "@/context";
 
 export const Layout: React.FC = () => {
@@ -54,7 +54,8 @@ export const Layout: React.FC = () => {
       </TabContext.Provider>
 
       <div className="footer">
-        The SCND Genesis - Copyright © 2008 -&nbsp;
+        The SCND Genesis
+        {APP_VERSION ? ` ${APP_VERSION}` : ""} - Copyright © 2008 -&nbsp;
         <span id="current-year">{new Date().getFullYear()}</span>
         &nbsp;Ifunga Ndana. All rights reserved.
       </div>
