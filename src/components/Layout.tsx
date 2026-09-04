@@ -1,28 +1,29 @@
 import React, { useMemo, useState } from "react";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 
 import { AppLink } from "./AppLink";
+import { Seo } from "./Seo";
 import { Tab } from "@/constants";
 import { ContextProps, TabContext } from "@/context";
 
 export const Layout: React.FC = () => {
+  const { pathname } = useLocation();
   const [active, setActive] = useState<string>("");
 
   const tabContext: ContextProps = useMemo(
     () => ({ active, setActive }),
-    [active, setActive]
+    [active, setActive],
   );
 
   return (
     <>
+      <Seo path={pathname} />
       <TabContext.Provider value={tabContext}>
         <div className="header-container">
           <div className="container-fluid">
             <div className="row">
               <div className="col-12 text-center">
-                <span style={{ fontSize: "4em", color: "rgb(255, 255, 255)" }}>
-                  THE SCND GENESIS
-                </span>
+                <h1 className="site-title">THE SCND GENESIS</h1>
               </div>
             </div>
             <div className="row">

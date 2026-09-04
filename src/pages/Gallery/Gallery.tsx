@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import { MetaTitle, Tab } from "@/constants";
+import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 import { Thumbnail, ThumbnailProps } from "@/components";
 
@@ -19,7 +19,6 @@ const Impl: React.FC = () => {
 
   return (
     <div className="col-12 center-block text-center">
-      <meta name="title" content={`${MetaTitle} Gallery`} />
       {data.map(({ src, href, title }) => (
         <Thumbnail key={src} src={src} href={href} title={title} />
       ))}

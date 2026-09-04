@@ -1,12 +1,11 @@
 import React from "react";
 
-import { MetaTitle, Tab } from "@/constants";
+import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 
-export const Impl: React.FC = () => {
+const Impl: React.FC = () => {
   return (
     <div className="text-center">
-      <meta name="title" content={`${MetaTitle} Ifunga Ndana`} />
       <div>
         <img
           style={{ width: "24rem", maxWidth: "24rem", borderRadius: "1rem" }}

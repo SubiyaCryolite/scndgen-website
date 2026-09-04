@@ -1,12 +1,11 @@
 import React from "react";
 
-import { MetaTitle, Tab } from "@/constants";
+import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
   return (
     <div>
-      <meta name="title" content={`${MetaTitle} Blog`} />
       <p>
         I have a presence on&nbsp;
         <a href="https://medium.com/@ifungandana" target="_target">

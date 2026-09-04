@@ -1,12 +1,11 @@
 import React from "react";
 
-import { MetaTitle, Tab } from "@/constants";
+import { Tab } from "@/constants";
 import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
   return (
     <div>
-      <meta name="title" content={`${MetaTitle} Legacy`} />
       <div>
         <div className="video-container">
           <iframe
