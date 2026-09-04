@@ -15,6 +15,7 @@ const Impl: React.FC = () => {
         <li>New soundtrack by FloatingRabbit</li>
         <li>Multiple, varied and beautifully animated stages</li>
         <li>Difficulty and time limit presets</li>
+        <li>Resolution options; the game vsyncs to the current monitor</li>
         <li>LAN and Online play</li>
         <li>Achievements</li>
       </ul>

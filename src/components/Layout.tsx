@@ -54,10 +54,11 @@ export const Layout: React.FC = () => {
       </TabContext.Provider>
 
       <div className="footer">
-        The SCND Genesis
-        {APP_VERSION ? ` ${APP_VERSION}` : ""} - Copyright © 2008 -&nbsp;
+        The SCND Genesis - Copyright © 2008 -&nbsp;
         <span id="current-year">{new Date().getFullYear()}</span>
         &nbsp;Ifunga Ndana. All rights reserved.
+        <br />
+        {APP_VERSION ? ` ${APP_VERSION}` : ""}
       </div>
     </>
   );

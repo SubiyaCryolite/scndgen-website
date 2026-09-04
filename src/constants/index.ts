@@ -43,7 +43,7 @@ const pageSeo: Record<string, SeoContent> = {
   "/legends/features": {
     title: `${MetaTitle} Legends Features`,
     description:
-      "Characters, story mode, soundtrack, LAN and online play, and achievements in The SCND Genesis: Legends.",
+      "Characters, story mode, soundtrack, display options, LAN and online play, and achievements in The SCND Genesis: Legends.",
   },
   "/legends/screenshots": {
     title: `${MetaTitle} Legends Screenshots`,
@@ -53,12 +53,12 @@ const pageSeo: Record<string, SeoContent> = {
   "/legends/faq": {
     title: `${MetaTitle} Legends FAQ`,
     description:
-      "Frequently asked questions about The SCND Genesis: Legends, including platforms, gameplay, and licensing.",
+      "FAQ for The SCND Genesis: Legends: Java 25, LWJGL and OpenGL 3.3, platforms, downloads, and licensing.",
   },
   "/legends/requirements": {
     title: `${MetaTitle} Legends Requirements`,
     description:
-      "Minimum and recommended system requirements for The SCND Genesis: Legends on Windows, Mac, and Linux.",
+      "Minimum and recommended requirements for The SCND Genesis: Legends: Java 25, OpenGL 3.3, 64-bit Windows, Linux, and macOS.",
   },
   "/blog": {
     title: `${MetaTitle} Blog`,

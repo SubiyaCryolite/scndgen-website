@@ -13,8 +13,8 @@
 }
 
 .header-white a:link,
-a:hover,
-a:visited {
+.header-white a:hover,
+.header-white a:visited {
   color: #ffffff;
   text-decoration: none;
 }

@@ -10,24 +10,31 @@ const Impl: React.FC = () => {
       Minimum Requirements
       <ul>
         <li>
-          Java Runtime Environment: Version 8 Update 40 (1.8.0_40) or higher
+          Java 25 JDK or JRE (for example Eclipse Temurin 25). The release JAR
+          does not bundle a JVM.
         </li>
-        <li>Operating System: Windows, Mac or Linux</li>
-        <li>RAM: 2GB</li>
-        <li>Graphics Card: 256MB VRAM</li>
-        <li>CPU: 1.4 GHz Single Core</li>
+        <li>
+          64-bit Windows 10 or later, 64-bit Linux, or macOS on Apple silicon
+          (official builds). Intel Mac and other architectures need a local
+          Gradle build.
+        </li>
+        <li>GPU and drivers with OpenGL 3.3 core support</li>
+        <li>RAM: 4 GB</li>
+        <li>Graphics memory: 512 MB</li>
+        <li>CPU: 64-bit dual core or better</li>
       </ul>
       <br />
       Recommended Setup
       <ul>
+        <li>Java 25 JDK or JRE</li>
         <li>
-          Java Runtime Environment: Version 8 Update 40 (1.8.0_40) or higher
+          64-bit Windows, Linux, or macOS on Apple silicon, with current GPU
+          drivers
         </li>
-        <li>Operating System: Windows, Mac or Linux</li>
-        <li>RAM: 4GB</li>
-        <li>Graphics Card: 512MB VRAM</li>
-        <li>Any Dual Core and higher</li>
-        <li>Stable internet connection</li>
+        <li>RAM: 8 GB</li>
+        <li>Graphics: dedicated GPU with OpenGL 3.3 or later</li>
+        <li>Any modern dual core or better</li>
+        <li>Network connection for LAN or online play</li>
       </ul>
     </section>
   );
