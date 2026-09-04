@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LegendTab } from "@/constants";
+import { LEGENDS_LATEST_ZIP, LegendTab } from "@/constants";
 import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
@@ -21,6 +21,21 @@ const Impl: React.FC = () => {
           target="_blank"
         >
           Medium
+        </a>
+        .
+      </p>
+      <p>
+        Latest GitHub build (Java 25 required):{" "}
+        <a href={LEGENDS_LATEST_ZIP.windows} target="_blank">
+          Windows
+        </a>
+        {", "}
+        <a href={LEGENDS_LATEST_ZIP.linux} target="_blank">
+          Linux
+        </a>
+        {", "}
+        <a href={LEGENDS_LATEST_ZIP.macos} target="_blank">
+          macOS
         </a>
         .
       </p>

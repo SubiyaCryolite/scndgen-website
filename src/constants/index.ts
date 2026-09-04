@@ -24,6 +24,15 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/media/images/favicon/apple-touch-ic
 export const MetaTitle = `${SITE_NAME} |`;
 export const APP_VERSION: string = import.meta.env.VITE_APP_VERSION ?? "";
 
+export const LEGENDS_GITHUB =
+  "https://github.com/SubiyaCryolite/The-SCND-Genesis-Legends";
+
+export const LEGENDS_LATEST_ZIP = {
+  windows: `${LEGENDS_GITHUB}/releases/latest/download/legends-windows-x64.zip`,
+  linux: `${LEGENDS_GITHUB}/releases/latest/download/legends-linux-x64.zip`,
+  macos: `${LEGENDS_GITHUB}/releases/latest/download/legends-macos-arm64.zip`,
+} as const;
+
 export interface SeoContent {
   title: string;
   description: string;

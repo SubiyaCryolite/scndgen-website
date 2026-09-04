@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LegendTab } from "@/constants";
+import { LEGENDS_GITHUB, LEGENDS_LATEST_ZIP, LegendTab } from "@/constants";
 import { withTabContext } from "@/context";
 
 const Impl: React.FC = () => {
@@ -69,12 +69,21 @@ const Impl: React.FC = () => {
         >
           itch.io
         </a>
-        , and as platform JARs on{" "}
-        <a
-          href="https://github.com/SubiyaCryolite/The-SCND-Genesis-Legends/releases"
-          target="_blank"
-        >
-          GitHub Releases
+        , or the latest zip from GitHub:{" "}
+        <a href={LEGENDS_LATEST_ZIP.windows} target="_blank">
+          Windows
+        </a>
+        {", "}
+        <a href={LEGENDS_LATEST_ZIP.linux} target="_blank">
+          Linux
+        </a>
+        {", "}
+        <a href={LEGENDS_LATEST_ZIP.macos} target="_blank">
+          macOS (Apple silicon)
+        </a>
+        . Older builds are on the{" "}
+        <a href={`${LEGENDS_GITHUB}/releases`} target="_blank">
+          releases page
         </a>
         .
       </blockquote>
@@ -82,10 +91,7 @@ const Impl: React.FC = () => {
       Where can I get involved (development)?
       <blockquote>
         The source is on{" "}
-        <a
-          href="https://github.com/SubiyaCryolite/The-SCND-Genesis-Legends"
-          target="_blank"
-        >
+        <a href={LEGENDS_GITHUB} target="_blank">
           GitHub
         </a>
         .
@@ -117,10 +123,7 @@ const Impl: React.FC = () => {
         Official builds may be sold by the author. A commercial fork that still
         ships this art, story, or characters needs either replacement content
         you have the right to use, or a separate license. Full terms are in{" "}
-        <a
-          href="https://github.com/SubiyaCryolite/The-SCND-Genesis-Legends/blob/master/LICENSE.md"
-          target="_blank"
-        >
+        <a href={`${LEGENDS_GITHUB}/blob/master/LICENSE.md`} target="_blank">
           LICENSE.md
         </a>{" "}
         in the source repository.
