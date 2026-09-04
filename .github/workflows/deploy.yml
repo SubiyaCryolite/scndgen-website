@@ -42,11 +42,12 @@ jobs:
       - name: Upload dist via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.FTP_HOST || secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ secrets.FTPS_PORT == '990' && 'ftps-legacy' || 'ftps' }}
+          protocol: ftps
           port: ${{ secrets.FTPS_PORT }}
+          security: loose
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_REMOTE_DIR || 'public_html/' }}
           dangerous-clean-slate: false
